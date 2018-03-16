@@ -7,10 +7,20 @@ def is_palindrome(n):   #打印回数：从左读和从右读是相同的数
     for i in range(x//2 + 1):
         if s[i] == s[x -1 -i]:
             if i >= x//2:
-                print(n)
-            continue
+                return n
         else:
             break
 
 
 print(list(filter(is_palindrome, range(10000, 20000))))
+
+#还有一种简便写法 利用字符串翻转
+#s = str(n)
+#if s==s[::-1]:
+#    return n
+
+
+#还有溜得飞起的大佬：
+#def is_palindrome(n):
+#    return str(n) == str(n)[::-1]  #return 返回的直接是TRUE或者FALSE，filter就直接筛选了数值  这个方法太棒了
+
